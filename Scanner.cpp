@@ -24,9 +24,11 @@ void Scanner::backgroundThread()
     int i = 0;
     while (!stopped)
     {
+        // TODO test generation
         mQueue.putFile("Test" + std::to_string(i));
         i++;
 
-        if(i>10) return;
+        //Test
+        if(i>100) return;
     }
 }
