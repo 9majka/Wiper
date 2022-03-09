@@ -1,7 +1,3 @@
-//
-// Created by Oleksandr Shchukin on 09.03.2022.
-//
-
 #include "Scanner.h"
 #include "FileQueue.h"
 

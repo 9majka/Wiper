@@ -1,7 +1,3 @@
-//
-// Created by Oleksandr Shchukin on 09.03.2022.
-//
-
 #ifndef UNTITLED_FILEPROCESSOR_H
 #define UNTITLED_FILEPROCESSOR_H
 

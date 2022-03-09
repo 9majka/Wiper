@@ -1,7 +1,3 @@
-//
-// Created by Oleksandr Shchukin on 09.03.2022.
-//
-
 #ifndef UNTITLED_FILEQUEUE_H
 #define UNTITLED_FILEQUEUE_H
 

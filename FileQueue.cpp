@@ -1,7 +1,3 @@
-//
-// Created by Oleksandr Shchukin on 09.03.2022.
-//
-
 #include "FileQueue.h"
 #include <mutex>
 #include <condition_variable>

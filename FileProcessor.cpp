@@ -1,7 +1,3 @@
-//
-// Created by Oleksandr Shchukin on 09.03.2022.
-//
-
 #include "FileProcessor.h"
 #include "FileWiper.h"
 #include "FileQueue.h"
