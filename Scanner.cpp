@@ -10,7 +10,7 @@ Scanner::Scanner(FileQueue &queue)
 
 void Scanner::startScan(const std::string & rootPath)
 {
-    mThread = std::thread(&Scanner::backgroundThread, this);
+    mThread = std::thread(&Scanner::backgroundThread, this, rootPath);
 }
 
 void Scanner::stop()
@@ -19,7 +19,7 @@ void Scanner::stop()
     mThread.join();
 }
 
-void Scanner::backgroundThread()
+void Scanner::backgroundThread(std::string rootPath)
 {
     int i = 0;
     while (!stopped)

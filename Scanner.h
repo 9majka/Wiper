@@ -13,7 +13,7 @@ public:
     void stop();
 
 private:
-    void backgroundThread();
+    void backgroundThread(std::string rootPath);
 
 private:
     FileQueue & mQueue;
