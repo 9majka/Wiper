@@ -4,4 +4,5 @@
 bool FileWiper::wipeFile(const std::string & filePath)
 {
     std::cout<<"File wiping: " << filePath << std::endl;
+    return true;
 }
