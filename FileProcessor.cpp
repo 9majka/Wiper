@@ -1,6 +1,7 @@
 #include "FileProcessor.h"
 #include "FileWiper.h"
 #include "FileQueue.h"
+#include "Utils.h"
 
 FileProcessor::FileProcessor(FileQueue & queue)
     : mFileQueue(queue)
@@ -23,7 +24,7 @@ void FileProcessor::backgroundThread()
 {
     while (!stopped)
     {
-        std::string filePath = mFileQueue.GetFile();
+        M_STRING filePath = mFileQueue.GetFile();
         FileWiper::wipeFile(filePath);
     }
 }

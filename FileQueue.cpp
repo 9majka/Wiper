@@ -8,21 +8,21 @@ namespace
     std::condition_variable _condVar;
 }
 
-void FileQueue::putFile(const std::string & filePath)
+void FileQueue::putFile(const M_STRING & filePath)
 {
     std::lock_guard lg(_queueMutex);
     mFileQueue.push(filePath);
     _condVar.notify_all();
 }
 
-std::string FileQueue::GetFile()
+M_STRING FileQueue::GetFile()
 {
     std::unique_lock<std::mutex> ul(_queueMutex);
     while (true)
     {
         if(mFileQueue.size() > 0)
         {
-            std::string filePath = mFileQueue.front();
+            M_STRING filePath = mFileQueue.front();
             mFileQueue.pop();
             return filePath;
         }
@@ -31,5 +31,5 @@ std::string FileQueue::GetFile()
             _condVar.wait(ul);
         }
     }
-    return "";
+    return M_STRING();
 }

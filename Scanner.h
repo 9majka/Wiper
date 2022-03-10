@@ -1,6 +1,7 @@
 #ifndef UNTITLED_SCANNER_H
 #define UNTITLED_SCANNER_H
 
+#include "Utils.h"
 #include <string>
 #include <thread>
 
@@ -9,11 +10,11 @@ class Scanner
 {
 public:
     Scanner(FileQueue & queue);
-    void startScan(const std::string & rootPath);
+    void startScan(const M_STRING & rootPath);
     void stop();
 
 private:
-    void backgroundThread(std::string rootPath);
+    void backgroundThread(M_STRING rootPath);
 
 private:
     FileQueue & mQueue;
